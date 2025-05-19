@@ -2,14 +2,6 @@
   #main.css
 \*-----------------------------------*/
 
-/**
- * copyright 2022 codewithsadee
- */
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
-
 :root {
   /**
    * colors
@@ -624,6 +616,8 @@ textarea.input-field {
 
 .copyright {
   margin-block-end: 12px;
+  width: 100%;
+  text-align: center;
 }
 
 .footer .social-link {
