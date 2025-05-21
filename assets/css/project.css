@@ -82,6 +82,42 @@ textarea {
   letter-spacing: 3px;
   text-align: center;
 }
+
+.flexContainer .persona {
+  height: 400px;
+  width: 400px;
+  border-radius: 50%;
+}
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 3rem;
+}
+
+.cards {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 4rem;
+  text-align: center;
+}
+
+.outerCont {
+  display: flex;
+  flex-direction: column;
+  gap: 7rem;
+}
+
+.flexContainer {
+  display: flex;
+  gap: 5rem;
+}
+
+.flexContainer > p {
+  width: 100%;
+}
+
 @media only screen and (max-width: 37.5em) {
   .heading-primary {
     font-size: 4.5rem;
@@ -94,6 +130,18 @@ textarea {
 @media only screen and (max-width: 56.25em) {
   .heading-sec__mb-bg {
     margin-bottom: 8rem;
+  }
+
+  .flexContainer {
+    flex-direction: column;
+  }
+
+  .flexContainer:nth-of-type(2) {
+    flex-direction: column-reverse;
+  }
+
+  .flexContainer .project-details__showcase-img {
+    margin-inline: auto;
   }
 }
 
@@ -245,7 +293,7 @@ textarea {
       rgba(0, 98, 185, 0.8),
       rgba(0, 98, 185, 0.8)
     ),
-    url(../../assets/svg/common-bg.svg);
+    url(../.assets/svg/common-bg.svg);
   background-position: center;
   height: 100vh;
   min-height: 80rem;
@@ -376,6 +424,15 @@ textarea {
     grid-gap: 2rem;
     margin-bottom: 8rem;
   }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 @media only screen and (max-width: 56.25em) {
   .projects__row {
@@ -434,7 +491,7 @@ textarea {
       rgba(0, 98, 185, 0.8),
       rgba(0, 98, 185, 0.8)
     ),
-    url(../../assets/svg/common-bg.svg);
+    url(../.assets/svg/common-bg.svg);
   background-size: cover;
   background-position: center;
 }
@@ -603,14 +660,24 @@ textarea {
 
 .project-details__content {
   padding: 8rem 0;
-  max-width: 90rem;
+  max-width: 1320px;
   margin: auto;
+}
+.project-details__showcase-img-cont {
+  max-width: 90rem;
+  margin-inline: auto;
 }
 .project-details__content-title {
   font-weight: 700;
   font-size: 2.8rem;
   margin-bottom: 3rem;
 }
+
+.miniheader {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
 @media only screen and (max-width: 37.5em) {
   .project-details__content-title {
     font-size: 2.4rem;
@@ -626,6 +693,11 @@ textarea {
   width: 100%;
 }
 
+.flexContainer .design-pic {
+  height: 100%;
+  width: 400px;
+}
+
 .project-details__content-main {
   width: 100%;
   /* max-width: 70rem; */
@@ -633,7 +705,7 @@ textarea {
 }
 
 .project-details__desc {
-  margin: 0 0 7rem 0;
+  margin: 0 0 4rem 0;
 }
 .project-details__desc-para {
   font-size: 1.8rem;
