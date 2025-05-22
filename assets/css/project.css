@@ -95,6 +95,15 @@ textarea {
   padding: 3rem;
 }
 
+.card h4 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.para-card {
+  font-size: 1.4rem;
+}
+
 .cards {
   width: 100%;
   display: grid;
