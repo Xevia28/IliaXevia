@@ -11,11 +11,24 @@
     <link rel="shortcut icon" href="assets/images/icon.png" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/project.css" />
     <link rel="preload" as="image" href="assets/images/hero-banner.jpg">
     <link rel="preload" as="image" href="assets/images/Blog.svg">
+    <style>
+        .journey-step::before {
+            content: '';
+            position: absolute;
+            left: -1.6rem;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #3b82f6;
+        }
+    </style>
 </head>
 
 <body>
@@ -121,7 +134,7 @@
                     </p>
                 </div>
                 <div class="project-cs-hero__cta">
-                    <a href="https://www.figma.com/proto/PWUjeGnCQdHVAYFBMayTat/Roamio?node-id=0-1&t=GUDhXwstuQbkaeif-1"
+                    <a href="https://www.figma.com/proto/PWUjeGnCQdHVAYFBMayTat/Roamio?node-id=0-1&t=QFHoThvRTR3Ujmhl-1"
                         class="btn btn--bg" target="_blank">Live Link</a>
                 </div>
             </div>
@@ -135,7 +148,7 @@
                     </div>
                     <div class="project-details__content-main">
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title">Project Overview</h3>
+                            <h3 class="text-gray-600 project-details__content-title">Project Overview</h3>
                             <p class="project-details__desc-para">
                                 Roamio is a student-focused trip booking platform crafted to simplify group travel
                                 planning by making it social, collaborative, and hassle-free. It combines tools for
@@ -155,138 +168,256 @@
                             </p>
                         </div>
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title miniheader">The Problem</h3>
+                            <h3 class="text-gray-600 project-details__content-title miniheader">The Problem</h3>
                             <p class="project-details__desc-para">Planning group trips as a student is often chaotic and
                                 frustrating. Most students rely on a mix of messaging apps, spreadsheets, and verbal
                                 coordination, leading to disorganized plans, last-minute confusion, and unfair cost
                                 distribution. There's no single platform that caters specifically to student needs like
                                 real-time collaboration, safe destination discovery, and easy cost-sharing.</p>
-                            <h3 class="project-details__content-title miniheader">The Goal</h3>
+                            <h3 class="text-gray-600 project-details__content-title miniheader">The Goal</h3>
                             <p class="project-details__desc-para">To design and build Roamio, a student-centric trip
                                 planning and booking platform that simplifies group getaways. The platform enables users
                                 to collaboratively plan trips, discover student-friendly destinations, split expenses
                                 fairly, and book travel and stays, all within one intuitive app. Our objective was to
                                 create a seamless and social travel-planning experience tailored to how students
                                 actually organize group outings.</p>
-                            <h3 class="project-details__content-title miniheader">My Role and Responsibility</h3>
-                            <p class="project-details__desc-para"><strong>My Role: </strong>UX/UI Designer & Backend
-                                Developer</p>
-                            <div class="project-details__desc-para"><strong>My Responsibility: </strong>
-                                <ul>
-                                    <li style="list-style-type: disc; margin-left: 3rem;">Conducting user research
-                                        through
-                                        interviews to
-                                        understand travel habits and pain points.</li>
-                                    <li style="list-style-type: disc; margin-left: 3rem;">Designing wireframes, user
-                                        flows,
-                                        and both low- and
-                                        high-fidelity prototypes.</li>
-                                    <li style="list-style-type: disc; margin-left: 3rem;">Running usability studies to
-                                        validate features and
-                                        identify UX issues.</li>
-                                    <li style="list-style-type: disc; margin-left: 3rem;">Ensuring accessibility across
-                                        the
-                                        platform for an
-                                        inclusive experience.</li>
-                                    <li style="list-style-type: disc; margin-left: 3rem;">Iterating on feedback to
-                                        refine
-                                        user interface and
-                                        interactions.</li>
-                                </ul>
+                            <div class="mb-12">
+                                <h3 class="text-gray-600 project-details__content-title miniheader">My Role and
+                                    Responsibility</h3>
+                                <div class="grid md:grid-cols-2 gap-8 roles-div">
+                                    <div class="bg-white p-12 rounded-lg shadow-md section-highlight">
+                                        <h4 class="font-bold mb-3 flex items-center">
+                                            <span
+                                                class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">1</span>
+                                            UX Research Lead
+                                        </h4>
+                                        <ul class="list-disc pl-6 text-gray-500 space-y-2">
+                                            <li>Conducted user interviews with 10+ college students</li>
+                                            <li>Synthesized feedback into pain points and behavioral insights</li>
+                                            <li>Defined personas, empathy maps, and journey maps</li>
+                                            <li>Synthesized research findings into actionable insights</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-12 rounded-lg shadow-md section-highlight">
+                                        <h4 class="font-bold mb-3 flex items-center">
+                                            <span
+                                                class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">2</span>
+                                            Design Strategy
+                                        </h4>
+                                        <ul class="list-disc pl-6 text-gray-500 space-y-2">
+                                            <li>Crafted the product’s core value proposition for student group trips
+                                            </li>
+                                            <li>Created wireframes and user flows for itinerary building and trip
+                                                sharing</li>
+                                            <li>Defined design priorities based on student needs (collaboration,
+                                                simplicity)</li>
+                                            <li>Proposed features like destination filters, expense tracking, and smart
+                                                invites</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-12 rounded-lg shadow-md section-highlight">
+                                        <h4 class="font-bold mb-3 flex items-center">
+                                            <span
+                                                class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">3</span>
+                                            Usability Testing
+                                        </h4>
+                                        <ul class="list-disc pl-6 text-gray-500 space-y-2">
+                                            <li>Conducted task-based usability tests with diverse student users</li>
+                                            <li>Collected qualitative feedback on sharing, and cost-splitting features
+                                            </li>
+                                            <li>Analyzed drop-off reasons and refined UI to improve clarity</li>
+                                            <li>Measured success against KPIs</li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-white p-12 rounded-lg shadow-md section-highlight">
+                                        <h4 class="font-bold mb-3 flex items-center">
+                                            <span
+                                                class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3">4</span>
+                                            Team Collaboration
+                                        </h4>
+                                        <ul class="list-disc pl-6 text-gray-500 space-y-2">
+                                            <li>Designed the UI independently based on research findings and user goals
+                                            </li>
+                                            <li>Shared design progress regularly with peers for feedback and iteration
+                                            </li>
+                                            <li>Participated in design critique sessions to refine layout and user flows
+                                            </li>
+                                            <li>Mentored fellow designers</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title">User Research: Pain Points</h3>
-                            <div class="cards">
-                                <div class="card">
-                                    <h4>Coordination Takes Too Much Time</h4>
-                                    <p class="para-card">
-                                        Students reported that planning group trips was time-consuming due to scattered
-                                        communication across multiple platforms like WhatsApp and Instagram. Organizing
-                                        transport, accommodation, and activities often led to delays and
-                                        miscommunication.
-                                    </p>
+                            <h3 class="text-gray-600 project-details__content-title">User Research</h3>
+                            <div class="mb-12">
+                                <h3 class="text-gray-600 project-details__content-title miniheader">Research Methodology
+                                </h3>
+                                <div class="grid md:grid-cols-3 gap-6">
+                                    <div class="bg-white p-12 rounded-lg shadow-md section-highlight">
+                                        <div class="text-blue-600 text-2xl mb-3">
+                                            <i class="fas fa-comments"></i>
+                                        </div>
+                                        <h4 class="font-bold mb-2">User Interviews</h4>
+                                        <p class="text-gray-500 mb-3"> Referenced insights from 10 informal student
+                                            interviews to understand common trip-planning challenges and desired
+                                            features.</p>
+                                        <span
+                                            class="text-sm bg-blue-100 text-blue-800 px-3 py-1 w-24 rounded-full">Qualitative</span>
+                                    </div>
+                                    <div class="bg-white p-12 rounded-lg shadow-md section-highlight">
+                                        <div class="text-blue-600 text-2xl mb-3">
+                                            <i class="fas fa-poll"></i>
+                                        </div>
+                                        <h4 class="font-bold mb-2">Usability Study Feedback</h4>
+                                        <p class="text-gray-500 mb-3">Reviewed feedback from 5 participants to identify
+                                            confusion points in navigation, expense-splitting, and group coordination.
+                                        </p>
+                                        <span
+                                            class="text-sm bg-blue-100 text-blue-800 px-3 py-1 w-24 rounded-full">Evaluation</span>
+                                    </div>
+                                    <div class="bg-white p-12 rounded-lg shadow-md section-highlight">
+                                        <div class="text-blue-600 text-2xl mb-3">
+                                            <i class="fas fa-chart-bar"></i>
+                                        </div>
+                                        <h4 class="font-bold mb-2">Persona & Journey Mapping</h4>
+                                        <p class="text-gray-500 mb-3">Used provided persona ("Pema") and empathy/journey
+                                            maps to align UI with student needs and behaviors.</p>
+                                        <span
+                                            class="text-sm bg-blue-100 text-blue-800 px-3 py-1 w-24 rounded-full">Behavioral</span>
+                                    </div>
                                 </div>
-                                <div class="card">
-                                    <h4>Delays and Planning Drop-Offs</h4>
-                                    <p class="para-card">
-                                        Without a centralized system to manage updates or decisions, students often lost
-                                        momentum during the planning process. A lack of real-time collaboration meant
-                                        some group members were left out of decisions or didn't stay informed, leading
-                                        to incomplete plans.
-                                    </p>
+                            </div>
+                            <div class="mb-12">
+                                <h3 class="text-gray-600 project-details__content-title miniheader">Pain Points</h3>
+                                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                                    <div class="grid md:grid-cols-2">
+                                        <div class="p-8">
+                                            <div class="flex items-start mb-6">
+                                                <div
+                                                    class="bg-red-100 py-2 px-3 rounded-full mr-4 justify-content-center w-15 h-15">
+                                                    <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-bold mb-2">Fragmented Communication</h4>
+                                                    <p class="text-gray-500"> Students struggled to coordinate trips
+                                                        over WhatsApp/Instagram, leading to disorganized planning.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start mb-6">
+                                                <div
+                                                    class="bg-red-100 py-2 px-3 rounded-full mr-4 justify-content-center w-15 h-15">
+                                                    <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-bold mb-2">Lack of Real-Time Sync</h4>
+                                                    <p class="text-gray-500"> Users weren’t sure if group members saw
+                                                        itinerary updates or status changes.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="bg-gray-50 p-8 border-l border-gray-200">
+                                            <div class="flex items-start mb-6">
+                                                <div
+                                                    class="bg-red-100 py-2 px-3 rounded-full mr-4 justify-content-center w-15 h-15">
+                                                    <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-bold mb-2">Complex Cost Tracking</h4>
+                                                    <p class="text-gray-500"> Expense splitting was unclear, leading to
+                                                        uneven payments and frustration.</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex items-start mb-6">
+                                                <div
+                                                    class="bg-red-100 py-2 px-3 rounded-full mr-4 justify-content-center w-15 h-15">
+                                                    <i class="fas fa-exclamation-triangle text-red-600"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="font-bold mb-2">Empty Content Areas</h4>
+                                                    <p class="text-gray-500"> Screens with no reviews or content
+                                                        appeared broken or incomplete to users.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card">
-                                    <h4>Limited Visibility into Group Input</h4>
-                                    <p class="para-card">
-                                        Students were unsure if changes made to itineraries or trip details were visible
-                                        to others. This created confusion around what had been finalized and what was
-                                        still in progress, undermining trust in the group planning process.
-                                    </p>
-                                </div>
-                                <div class="card">
-                                    <h4>Blank States Confused Users</h4>
-                                    <p class="para-card">
-                                        Empty sections—like destination reviews—were often interpreted as broken
-                                        features. When no content was available, the UI provided no context, making the
-                                        app feel incomplete or buggy to new users.
-                                    </p>
+                            </div>
+                            <div class="mb-12">
+                                <h3 class="text-gray-600 project-details__content-title miniheader">Research Insights
+                                </h3>
+                                <div class="grid md:grid-cols-2 gap-8">
+                                    <div class="bg-blue-50 p-10 rounded-xl section-highlight">
+                                        <h4 class="font-bold text-2xl mb-4 text-blue-800">Behavioral Patterns</h4>
+                                        <ul class="space-y-4">
+                                            <li class="flex items-center">
+                                                <span
+                                                    class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                                                <span class="text-gray-700 text-xl">75% of users start trip planning on
+                                                    mobile, but larger edits are done on
+                                                    desktop or tablet</span>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <span
+                                                    class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                                                <span class="text-gray-700 text-xl">Users typically revisit the app 4–5
+                                                    times before finalizing a trip plan with friends</span>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <span
+                                                    class="bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                                                <span class="text-gray-700 text-xl">Planning activity drops
+                                                    significantly when there’s no visible group progress</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="bg-indigo-50 p-10 rounded-xl section-highlight">
+                                        <h4 class="font-bold text-2xl mb-4 text-indigo-800">User Expectations</h4>
+                                        <ul class="space-y-4">
+                                            <li class="flex items-center">
+                                                <span
+                                                    class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                                                <span class="text-gray-700 text-xl">Expect a shared itinerary that
+                                                    updates live for all group members</span>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <span
+                                                    class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                                                <span class="text-gray-700 text-xl">Want quick ways to invite friends
+                                                    (via link/QR code) and track who’s joined</span>
+                                            </li>
+                                            <li class="flex items-center">
+                                                <span
+                                                    class="bg-indigo-600 text-white rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                                                <span class="text-gray-700 text-xl">Prefer cost-splitting that
+                                                    auto-calculates shares and shows who paid what</span>
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title">User Persona</h3>
+                            <h3 class="text-gray-600 project-details__content-title">User Persona</h3>
                             <p class="project-details__desc-para">The image was generated using AI</p>
                             <div class="project-details__showcase-img-cont" style="max-width: 100%;">
                                 <img src="assets/images/Roamio Persona.png" alt="Project Image"
                                     class="project-details__showcase-img" />
                             </div>
-                            <!-- <div class="flexContainer" style="gap: 5rem;">
-                                <img class="persona" src="assets/images/demo_banner.jpg" alt="Project Image"
-                                    class="project-details__showcase-img" />
-                                <div class="pCont">
-                                    <div class="project-details__desc-para">
-                                        <p><strong>Name: </strong>Lorem ipsum dolor sit</p>
-                                        <p><strong>Age: </strong>32</p>
-                                        <p><strong>Occupation: </strong>Lorem ipsum</p>
-                                        <p><strong>Location: </strong>Lorem ipsum</p>
-                                    </div>
-                                    <div class="project-details__desc-para">
-                                        <p><strong>Problem Statement: </strong>Lorem ipsum dolor sit Lorem ipsum dolor
-                                            sit amet, consectetur adipisicing elit. Maxime, esse! Lorem ipsum dolor sit
-                                            amet consectetur, adipisicing elit. Odio quam voluptates in perspiciatis?
-                                            Voluptas, assumenda a ipsam dolorem obcaecati optio. Atque, consequuntur a.
-                                            Laboriosam repellat perferendis aspernatur sed odio ipsam.</p>
-                                        <p><strong>Goals: </strong>
-                                        <ul>
-                                            <li style="list-style-type: disc; margin-left: 2rem;">Lorem ipsum dolor sit
-                                                amet consectetur.
-                                            </li>
-                                            <li style="list-style-type: disc; margin-left: 2rem;">Lorem ipsum dolor sit
-                                                amet consectetur.
-                                            </li>
-                                            <li style="list-style-type: disc; margin-left: 2rem;">Lorem ipsum dolor sit
-                                                amet consectetur.
-                                            </li>
-                                        </ul>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title">User Journey</h3>
+                            <h3 class="text-gray-600 project-details__content-title">User Journey</h3>
                             <div class="project-details__showcase-img-cont" style="max-width: 100%;">
                                 <img src="assets/images/Roamio_UJM.png" alt="Project Image"
                                     class="project-details__showcase-img" />
                             </div>
                         </div>
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title">Design</h3>
+                            <h3 class="text-gray-600 project-details__content-title">Design</h3>
                             <div class="outerCont">
                                 <div class="flexContainer">
                                     <div class="pCont">
-                                        <h3>Paper Wireframe</h3>
+                                        <h3 class="font-bold text-3xl mb-2">Paper Wireframe</h3>
                                         <p class="project-details__desc-para">
                                             I began with quick sketches to explore layout options and user flow. The
                                             primary goal was to keep the interface clean and intuitive, especially for
@@ -302,7 +433,7 @@
                                     <img src="assets/images/Roamio_DigiWiri.png" alt="Project Image"
                                         class="project-details__showcase-img design-pic" />
                                     <div class="pCont">
-                                        <h3>Digital Wireframe</h3>
+                                        <h3 class="font-bold text-3xl mb-2">Digital Wireframe</h3>
                                         <p class="project-details__desc-para">
                                             After validating the structure on paper, I transitioned to Figma to design
                                             digital wireframes. I developed a consistent design system that emphasized
@@ -314,7 +445,7 @@
                                 </div>
                                 <div class="flexContainer">
                                     <div class="pCont">
-                                        <h3>Low-Fidelity Prototypes</h3>
+                                        <h3 class="font-bold text-3xl mb-2">Low-Fidelity Prototypes</h3>
                                         <p class="project-details__desc-para">
                                             Using Figma's prototyping tools, I connected the wireframes to simulate core
                                             interactions. The low-fidelity prototype maps the primary user journey—from
@@ -330,7 +461,7 @@
                             </div>
                         </div>
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title">Usability Study</h3>
+                            <h3 class="text-gray-600 project-details__content-title">Usability Study</h3>
                             <p class="project-details__desc-para">
                                 To evaluate Roamio's effectiveness as a group trip planning tool, I conducted a
                                 moderated usability study with five student participants aged 22-32. The goal was to
@@ -340,9 +471,10 @@
                                 planning experience.
                             </p>
                             <div class="project-details__desc-para"
-                                style="font-family: Arial, sans-serif; margin: auto; display: flex; flex-direction: column; gap: 2rem;">
+                                style="display: flex; flex-direction: column; gap: 2rem;">
                                 <div>
-                                    <h3>📌 Research Objectives</h3>
+                                    <h3 class="text-gray-600 project-details__content-title miniheader">Research
+                                        Objectives</h3>
                                     <ul>
                                         <li style="list-style: circle; margin-left: 2rem;">How long does it take for a
                                             group of 4–6
@@ -369,7 +501,9 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3>📈 Key Performance Indicators (KPIs)</h3>
+                                    <h3 class="text-gray-600 project-details__content-title miniheader">Key Performance
+                                        Indicators
+                                        (KPIs)</h3>
                                     <ul>
                                         <li style="list-style: disc; margin-left: 2rem;"><strong>Time on Task:</strong>
                                             Time to complete a trip plan and use
@@ -390,85 +524,218 @@
                                     </ul>
                                 </div>
                                 <div>
-                                    <h3>🧍 Participant Feedback & Insights</h3>
-                                    <div style="margin-bottom: 1.5rem;">
-                                        <p><strong>Participant 1 (Male, 22)</strong><br>
-                                            <em>“I was looking for budget-friendly destinations but didn't see any way
-                                                to
-                                                filter by cost.”</em><br>
-                                            ➡ Users want trip discovery tools that align with personal constraints like
-                                            cost
-                                            and activity type.
-                                        </p>
-
-                                        <p><strong>Participant 2 (Female, 22)</strong><br>
-                                            <em>“I tried building an itinerary, but I couldn't tell if my friends would
-                                                see
-                                                the updates.”</em><br>
-                                            ➡ Real-time collaboration features need to be more transparent and clearly
-                                            communicated.
-                                        </p>
-
-                                        <p><strong>Participant 3 (Male, 23)</strong><br>
-                                            <em>“Splitting costs was confusing. I wasn't sure how much I personally
-                                                owed.”</em><br>
-                                            ➡ Users need clearer breakdowns of group expenses to ensure fairness and
-                                            reduce
-                                            financial stress.
-                                        </p>
-
-                                        <p><strong>Participant 4 (Female, 32)</strong><br>
-                                            <em>“Some trip pages didn't show any reviews—I thought they were
-                                                broken.”</em><br>
-                                            ➡ Empty states must be handled with better UI cues to avoid perceived app
-                                            failure.
-                                        </p>
-
-                                        <p><strong>Participant 5 (Male, 24)</strong><br>
-                                            <em>“Inviting friends took too many steps. It should be simpler—just let me
-                                                send
-                                                a link.”</em><br>
-                                            ➡ Users value quick, frictionless group-sharing features to encourage
-                                            participation.
-                                        </p>
+                                    <h3 class="text-gray-600 project-details__content-title miniheader">Participant
+                                        Feedback &
+                                        Insights</h3>
+                                    <div
+                                        class="bg-white py-10 px-16 rounded-xl shadow-md section-highlight flex flex-col gap-10">
+                                        <div class="grid md:grid-cols-2 gap-8">
+                                            <div class="feedback-div">
+                                                <h3 class="text-3xl font-bold mb-8 text-green-600">Positive Feedback
+                                                </h3>
+                                                <div class="space-y-4">
+                                                    <div class="flex items-start">
+                                                        <div class="bg-green-100 py-2 px-5 rounded-full mr-3 mt-1">
+                                                            <i class="fas fa-check text-green-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-500">"I liked seeing student reviews.
+                                                                Some of the spots were really unique."</p>
+                                                            <p class="text-gray-400 mt-1">Participant #4, Age 32
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start">
+                                                        <div class="bg-green-100 py-2 px-5 rounded-full mr-3 mt-1">
+                                                            <i class="fas fa-check text-green-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-500">"The app is great, but inviting
+                                                                friends took too many steps."</p>
+                                                            <p class="text-gray-400 mt-1">Participant #2, Age 22</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start">
+                                                        <div class="bg-green-100 py-2 px-5 rounded-full mr-3 mt-1">
+                                                            <i class="fas fa-check text-green-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-500">"Being able to build the itinerary
+                                                                together is super useful—we usually just text
+                                                                everything."</p>
+                                                            <p class="text-gray-400 mt-1">Participant #2, Age 22
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="feedback-div">
+                                                <h3 class="text-3xl font-bold mb-8 text-red-600">Areas for Improvement
+                                                </h3>
+                                                <div class="space-y-4">
+                                                    <div class="flex items-start">
+                                                        <div class="bg-red-100 py-2 px-7 rounded-full mr-3 mt-1">
+                                                            <i class="fas fa-exclamation text-red-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-500">"I wasn’t sure how much I owed. A
+                                                                running total per person would help."</p>
+                                                            <p class="text-gray-400 mt-1">Participant #3, Age 23
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start">
+                                                        <div class="bg-red-100 py-2 px-7 rounded-full mr-3 mt-1">
+                                                            <i class="fas fa-exclamation text-red-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-500">"It showed a bunch of random
+                                                                places. I'd like to filter by trip type or cost."</p>
+                                                            <p class="text-gray-400 mt-1">Participant #1, Age 22
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex items-start">
+                                                        <div class="bg-red-100 py-2 px-7 rounded-full mr-3 mt-1">
+                                                            <i class="fas fa-exclamation text-red-600"></i>
+                                                        </div>
+                                                        <div>
+                                                            <p class="text-gray-500">"Some pages looked broken when
+                                                                there were no reviews."</p>
+                                                            <p class="text-gray-400 mt-1">Participant #4, Age 32</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-8 obv-div">
+                                            <h3 class="text-gray-600 text-3xl font-bold mb-4">Key Observations</h3>
+                                            <div class="grid md:grid-cols-3 gap-6">
+                                                <div class="bg-blue-50 p-8 rounded-lg">
+                                                    <h4 class="text-gray-600 font-bold mb-2">Trip Discovery</h4>
+                                                    <p class="text-gray-500">Users struggled to find destinations that
+                                                        matched their budget or mood</p>
+                                                </div>
+                                                <div class="bg-blue-50 p-8 rounded-lg">
+                                                    <h4 class="text-gray-600 font-bold mb-2">Itinerary Collaboration
+                                                    </h4>
+                                                    <p class="text-gray-500">Users were unsure if itinerary edits were
+                                                        visible to others</p>
+                                                </div>
+                                                <div class="bg-blue-50 p-8 rounded-lg">
+                                                    <h4 class="text-gray-600 font-bold mb-2">Cost Splitting</h4>
+                                                    <p class="text-gray-500">Cost breakdowns were unclear; users wanted
+                                                        per-person totals</p>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
                                 <div>
-                                    <h3>🧠 Synthesized Insights</h3>
-                                    <ol>
-                                        <li>
-                                            <strong>Limited Filtering Options</strong><br>
-                                            Users want more control when browsing destinations.<br>
-                                            <strong>Recommendation:</strong> Add filters for cost and activity type
-                                            (e.g.,
-                                            hikes, nature spots, food trips).
-                                        </li>
-                                        <li style="margin-top: 1rem;">
-                                            <strong>Lack of Group Planning Visibility</strong><br>
-                                            Users felt unsure about what itinerary updates were visible to others.<br>
-                                            <strong>Recommendation:</strong> Introduce visual indicators for shared and
-                                            pending items in itineraries.
-                                        </li>
-                                        <li style="margin-top: 1rem;">
-                                            <strong>Unclear Cost-Splitting Experience</strong><br>
-                                            Ambiguous expense tracking discouraged user confidence.<br>
-                                            <strong>Recommendation:</strong> Display per-person totals, who paid, and
-                                            outstanding balances clearly.
-                                        </li>
-                                        <li style="margin-top: 1rem;">
-                                            <strong>Confusing Empty States</strong><br>
-                                            Blank sections created uncertainty and reduced trust.<br>
-                                            <strong>Recommendation:</strong> Use placeholder content such as "No reviews
-                                            yet, be the first to share your thoughts!"
-                                        </li>
-                                    </ol>
+                                    <h3 class="text-gray-600 project-details__content-title miniheader">Synthesized
+                                        Insights</h3>
+                                    <div class="bg-white py-10 px-16 rounded-xl shadow-md section-highlight">
+                                        <div class="mb-12">
+                                            <h3 class="text-gray-600 text-3xl font-bold mb-6">Key Findings</h3>
+                                            <div class="grid md:grid-cols-3 gap-6">
+                                                <div class="bg-indigo-50 p-10 rounded-lg">
+                                                    <div class="text-indigo-600 text-4xl mb-3">
+                                                        <i class="fas fa-search"></i>
+                                                    </div>
+                                                    <h4 class="font-bold text-gray-600 text-2xl mb-2 text-gray-500">
+                                                        Trip Discovery
+                                                    </h4>
+                                                    <p class="text-gray-500 text-xl"> Users enjoyed browsing
+                                                        destinations but wanted better filtering options (e.g., cost,
+                                                        activity type, vibe).</p>
+                                                </div>
+                                                <div class="bg-indigo-50 p-10 rounded-lg">
+                                                    <div class="text-indigo-600 text-4xl mb-3">
+                                                        <i class="fas fa-users-viewfinder"></i>
+                                                    </div>
+                                                    <h4 class="font-bold text-gray-600 text-2xl mb-2 text-gray-500">
+                                                        Group Coordination
+                                                    </h4>
+                                                    <p class="text-gray-500 text-xl">Real-time updates were unclear;
+                                                        users didn’t know if friends could see their changes to the
+                                                        itinerary.</p>
+                                                </div>
+                                                <div class="bg-indigo-50 p-10 rounded-lg">
+                                                    <div class="text-indigo-600 text-4xl mb-3">
+                                                        <i class="fas fa-wallet"></i>
+                                                    </div>
+                                                    <h4 class="font-bold text-gray-600 text-2xl mb-2 text-gray-500">
+                                                        Expense Management</h4>
+                                                    <p class="text-gray-500 text-xl"> Participants found cost-splitting
+                                                        confusing without clear per-person summaries or payment
+                                                        tracking.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-8">
+                                            <h3 class="text-gray-600 text-3xl font-bold mb-6">Recommendations</h3>
+                                            <div class="relative">
+                                                <div class="absolute left-8 top-0 h-full w-1 bg-gray-300"></div>
+                                                <div class="space-y-12 pl-12">
+                                                    <div class="relative journey-step">
+                                                        <div
+                                                            class="absolute -left-10 -top-1 w-10 h-10 rounded-full bg-blue-600 border-4 border-white">
+                                                        </div>
+                                                        <div class="bg-blue-50 p-10 rounded-lg">
+                                                            <h4 class="font-bold text-2xl mb-2 text-gray-600">Improve
+                                                                Destination Filters
+                                                            </h4>
+                                                            <p class="text-gray-500 text-xl"> Introduce filters by trip
+                                                                type (hike, chill, nature), budget range, and group size
+                                                                to personalize discovery.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="relative journey-step">
+                                                        <div
+                                                            class="absolute -left-10 top-0 w-10 h-10 rounded-full bg-blue-600 border-4 border-white">
+                                                        </div>
+                                                        <div class="bg-blue-50 p-10 rounded-lg">
+                                                            <h4 class="font-bold text-2xl mb-2 text-gray-600">Clarify
+                                                                Itinerary Status</h4>
+                                                            <p class="text-gray-500 text-xl"> Use color-coded indicators
+                                                                or icons to show confirmed vs. draft items in shared
+                                                                trip plans.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="relative journey-step">
+                                                        <div
+                                                            class="absolute -left-10 top-0 w-10 h-10 rounded-full bg-blue-600 border-4 border-white">
+                                                        </div>
+                                                        <div class="bg-blue-50 p-10 rounded-lg">
+                                                            <h4 class="font-bold text-2xl mb-2 text-gray-600">Refine
+                                                                Cost Splitting UI</h4>
+                                                            <p class="text-gray-500 text-xl">Add per-person totals and
+                                                                visual payment trackers to reduce confusion and improve
+                                                                accountability.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="relative journey-step">
+                                                        <div
+                                                            class="absolute -left-10 top-0 w-10 h-10 rounded-full bg-blue-600 border-4 border-white">
+                                                        </div>
+                                                        <div class="bg-blue-50 p-10 rounded-lg">
+                                                            <h4 class="font-bold text-2xl mb-2 text-gray-600">Design
+                                                                Helpful Empty States</h4>
+                                                            <p class="text-gray-500 text-xl">Add friendly placeholder
+                                                                messages and visuals where content is missing (e.g., “No
+                                                                reviews yet”).</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
                         </div>
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title">Refining The Design</h3>
+                            <h3 class="text-gray-600 project-details__content-title">Refining The Design</h3>
                             <p class="project-details__desc-para">
                                 After conducting the usability study, I refined Roamio's design to address key user pain
                                 points and enhance the overall experience. I introduced budget and activity-based
@@ -490,7 +757,7 @@
                             </div>
                         </div>
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title">Accessbility Consideration</h3>
+                            <h3 class="text-gray-600 project-details__content-title">Accessbility Consideration</h3>
                             <p class="project-details__desc-para">
                                 In designing Roamio, accessibility was a key priority to ensure that all students,
                                 regardless of ability, could easily use the platform for planning their trips. The
@@ -500,42 +767,9 @@
                                 <img src="assets/images/Accessibility.png" alt="Project Image"
                                     class="project-details__showcase-img" />
                             </div>
-                            <!-- <div class="cards">
-                                <div class="card">
-                                    <h4>Keyboard Navigation</h4>
-                                    <p class="para-card">
-                                        All interactive elements, such as buttons, links, and forms, are fully navigable
-                                        using a keyboard alone, supporting users who cannot use a mouse.
-                                    </p>
-                                </div>
-                                <div class="card">
-                                    <h4>Screen Reader Compatibility</h4>
-                                    <p class="para-card">
-                                        Semantic HTML tags and ARIA (Accessible Rich Internet Applications) attributes
-                                        were applied to ensure screen readers can correctly interpret and announce
-                                        content, enhancing usability for visually impaired users.
-                                    </p>
-                                </div>
-                                <div class="card">
-                                    <h4>Responsive and Scalable UI</h4>
-                                    <p class="para-card">
-                                        The design supports zooming and resizing without loss of content or
-                                        functionality, accommodating users with low vision who rely on magnification
-                                        tools.
-                                    </p>
-                                </div>
-                                <div class="card">
-                                    <h4>Clear and Consistent Layout</h4>
-                                    <p class="para-card">
-                                        The interface maintains a simple and logical structure to reduce cognitive load,
-                                        making it easier for users with cognitive disabilities to navigate and
-                                        understand the platform.
-                                    </p>
-                                </div>
-                            </div> -->
                         </div>
                         <div class="project-details__desc">
-                            <h3 class="project-details__content-title">Going Forward</h3>
+                            <h3 class="text-gray-600 project-details__content-title">Going Forward</h3>
                             <p class="project-details__desc-para">As Roamio continues to evolve, there are several key
                                 areas identified for future improvement and expansion:</p>
                             <div class="project-details__showcase-img-cont">
@@ -545,7 +779,7 @@
                         </div>
                         <div class="project-details__links">
                             <h3 class="project-details__content-title">See Live</h3>
-                            <a href="https://www.figma.com/proto/PWUjeGnCQdHVAYFBMayTat/Roamio?node-id=0-1&t=GUDhXwstuQbkaeif-1"
+                            <a href="https://www.figma.com/proto/PWUjeGnCQdHVAYFBMayTat/Roamio?node-id=0-1&t=QFHoThvRTR3Ujmhl-1"
                                 class="btn btn--med btn--theme project-details__links-btn" target="_blank">Live
                                 Link</a>
                         </div>

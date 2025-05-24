@@ -104,6 +104,22 @@ textarea {
   font-size: 1.4rem;
 }
 
+.roles-div > div > ul > li {
+  color: grey;
+  font-size: 1.4rem;
+}
+
+.feedback-div p {
+  font-size: 1.4rem;
+}
+
+.obv-div h4 {
+  font-size: 1.6rem;
+}
+.obv-div p {
+  font-size: 1.4rem;
+}
+
 .cards {
   width: 100%;
   display: grid;

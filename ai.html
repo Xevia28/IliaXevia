@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usability Study | Project Name</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section-highlight {
+            transition: all 0.3s ease;
+        }
+
+        .section-highlight:hover {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+            transform: translateY(-5px);
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .journey-step::before {
+            content: '';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            height: 100%;
+            width: 2px;
+            background-color: #3b82f6;
+        }
+
+        .journey-step:last-child::before {
+            height: 50%;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="#" class="text-xl font-bold text-blue-600">MyPortfolio</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition">Home</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition">Projects</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition">About</a>
+                    <a href="#" class="text-gray-700 hover:text-blue-600 transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-button" class="text-gray-700">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-in">
+                <span
+                    class="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold inline-block mb-4">UX/UI
+                    Design</span>
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">E-Commerce App Usability Study</h1>
+                <p class="text-xl md:text-2xl max-w-3xl opacity-90">Comprehensive usability testing to validate design
+                    decisions and identify improvement opportunities</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <!-- Usability Study Section -->
+        <section id="usability" class="fade-in">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Usability Study Overview</h2>
+                <div class="bg-white p-8 rounded-xl shadow-md section-highlight">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4">Study Purpose</h3>
+                            <p class="text-gray-600 mb-6">The usability study was conducted to evaluate the
+                                effectiveness of our redesigned e-commerce app interface and identify areas for
+                                improvement before development.</p>
+                            <div class="flex items-center mb-4">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-calendar text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Timeline</h4>
+                                    <p class="text-gray-600">2 weeks (June 5-19, 2023)</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4">Methodology</h3>
+                            <div class="flex flex-wrap gap-3 mb-6">
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Moderated
+                                    Testing</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Task-Based</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Think
+                                    Aloud</span>
+                                <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm">Remote
+                                    Sessions</span>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-users text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Participants</h4>
+                                    <p class="text-gray-600">20 users (10 existing, 10 new)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Research Objectives -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Research Objectives</h2>
+                <div class="bg-white p-8 rounded-xl shadow-md section-highlight">
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <div class="text-blue-600 text-2xl mb-3">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 text-blue-800">1. Navigation Efficiency</h3>
+                            <p class="text-gray-700">Measure time to complete key tasks (product discovery, cart
+                                addition, checkout)</p>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <div class="text-blue-600 text-2xl mb-3">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 text-blue-800">2. Error Reduction</h3>
+                            <p class="text-gray-700">Identify and quantify points of confusion in user flows</p>
+                        </div>
+                        <div class="bg-blue-50 p-6 rounded-lg">
+                            <div class="text-blue-600 text-2xl mb-3">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                            <h3 class="font-bold text-lg mb-3 text-blue-800">3. User Satisfaction</h3>
+                            <p class="text-gray-700">Gather qualitative feedback on overall experience and perceived
+                                value</p>
+                        </div>
+                    </div>
+                    <div class="mt-8 bg-indigo-50 p-6 rounded-lg">
+                        <h3 class="font-bold text-lg mb-3 text-indigo-800">Testing Scenarios</h3>
+                        <ol class="list-decimal pl-5 space-y-3 text-gray-700">
+                            <li>Find a specific product using search and filters</li>
+                            <li>Add multiple items to cart and proceed to checkout</li>
+                            <li>Save an item for later purchase</li>
+                            <li>Find and apply a discount code</li>
+                            <li>Track an existing order</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Performance Indicators -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Key Performance Indicators (KPIs)</h2>
+                <div class="bg-white p-8 rounded-xl shadow-md section-highlight">
+                    <div class="overflow-x-auto">
+                        <table class="min-w-full divide-y divide-gray-200">
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        KPI</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Target</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Result</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Status</th>
+                                    <th scope="col"
+                                        class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                        Tooltip</th>
+                                </tr>
+                            </thead>
+                            <tbody class="bg-white divide-y divide-gray-200">
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Task
+                                        Success Rate</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">90%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">87%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">Near
+                                            Target</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="tooltip relative">
+                                            <i class="fas fa-info-circle text-blue-400"></i>
+                                            <span
+                                                class="tooltip-text absolute invisible opacity-0 bg-gray-800 text-white text-xs rounded py-1 px-2">Percentage
+                                                of tasks completed without assistance</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Time on
+                                        Task</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        < 3 min</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2:45 avg</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Achieved</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="tooltip relative">
+                                            <i class="fas fa-info-circle text-blue-400"></i>
+                                            <span
+                                                class="tooltip-text absolute invisible opacity-0 bg-gray-800 text-white text-xs rounded py-1 px-2">Average
+                                                time to complete primary tasks</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Error Rate
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                                        < 10%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">8%</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Achieved</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="tooltip relative">
+                                            <i class="fas fa-info-circle text-blue-400"></i>
+                                            <span
+                                                class="tooltip-text absolute invisible opacity-0 bg-gray-800 text-white text-xs rounded py-1 px-2">Percentage
+                                                of incorrect actions during tasks</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">SUS Score
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">80+</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">83</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Achieved</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="tooltip relative">
+                                            <i class="fas fa-info-circle text-blue-400"></i>
+                                            <span
+                                                class="tooltip-text absolute invisible opacity-0 bg-gray-800 text-white text-xs rounded py-1 px-2">System
+                                                Usability Scale (0-100)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">NPS</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">50+</td>
+                                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">62</td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <span
+                                            class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">Achieved</span>
+                                    </td>
+                                    <td class="px-6 py-4 whitespace-nowrap">
+                                        <div class="tooltip relative">
+                                            <i class="fas fa-info-circle text-blue-400"></i>
+                                            <span
+                                                class="tooltip-text absolute invisible opacity-0 bg-gray-800 text-white text-xs rounded py-1 px-2">Net
+                                                Promoter Score (-100 to 100)</span>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-8 grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="font-bold text-lg mb-4">Success Metrics Visualization</h3>
+                            <div class="bg-gray-100 rounded-lg p-6 h-64 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-chart-pie text-4xl text-gray-400 mb-2"></i>
+                                    <p class="text-gray-500">Success metrics visualization would appear here</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg mb-4">Time-on-Task Comparison</h3>
+                            <div class="bg-gray-100 rounded-lg p-6 h-64 flex items-center justify-center">
+                                <div class="text-center">
+                                    <i class="fas fa-chart-bar text-4xl text-gray-400 mb-2"></i>
+                                    <p class="text-gray-500">Time comparison charts would appear here</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Participant Feedback & Insights -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Participant Feedback & Insights</h2>
+                <div class="bg-white p-8 rounded-xl shadow-md section-highlight">
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-green-600">Positive Feedback</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 p-2 rounded-full mr-3 mt-1">
+                                        <i class="fas fa-check text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-700">"The new search is amazing! Found what I needed in
+                                            seconds."</p>
+                                        <p class="text-sm text-gray-500 mt-1">Participant #7, Age 29</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 p-2 rounded-full mr-3 mt-1">
+                                        <i class="fas fa-check text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-700">"Checkout was so fast I almost didn't believe it went
+                                            through."</p>
+                                        <p class="text-sm text-gray-500 mt-1">Participant #12, Age 35</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-green-100 p-2 rounded-full mr-3 mt-1">
+                                        <i class="fas fa-check text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-700">"The personalized recommendations actually matched my
+                                            style."</p>
+                                        <p class="text-sm text-gray-500 mt-1">Participant #3, Age 41</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold mb-4 text-red-600">Areas for Improvement</h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="bg-red-100 p-2 rounded-full mr-3 mt-1">
+                                        <i class="fas fa-exclamation text-red-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-700">"I couldn't find the saved items section at first -
+                                            maybe make it more visible?"</p>
+                                        <p class="text-sm text-gray-500 mt-1">Participant #5, Age 27</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-red-100 p-2 rounded-full mr-3 mt-1">
+                                        <i class="fas fa-exclamation text-red-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-700">"The animation when adding to cart was distracting -
+                                            maybe simpler?"</p>
+                                        <p class="text-sm text-gray-500 mt-1">Participant #9, Age 33</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="bg-red-100 p-2 rounded-full mr-3 mt-1">
+                                        <i class="fas fa-exclamation text-red-600"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-gray-700">"I wanted to see more shipping options upfront before
+                                            checkout."</p>
+                                        <p class="text-sm text-gray-500 mt-1">Participant #15, Age 45</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-4">Key Observations</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-bold mb-2">Search Behavior</h4>
+                                <p class="text-gray-600">70% of users tried filters before typing search terms</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-bold mb-2">Checkout Flow</h4>
+                                <p class="text-gray-600">3 users hesitated at payment method selection</p>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <h4 class="font-bold mb-2">Navigation</h4>
+                                <p class="text-gray-600">Saved items was the least discovered feature</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Synthesized Insights -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-6">Synthesized Insights</h2>
+                <div class="bg-white p-8 rounded-xl shadow-md section-highlight">
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-4">Key Findings</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div class="bg-indigo-50 p-6 rounded-lg">
+                                <div class="text-indigo-600 text-2xl mb-3">
+                                    <i class="fas fa-search"></i>
+                                </div>
+                                <h4 class="font-bold text-lg mb-2">Search & Discovery</h4>
+                                <p class="text-gray-700">Users responded positively to visual search but wanted more
+                                    filter options for specific needs.</p>
+                            </div>
+                            <div class="bg-indigo-50 p-6 rounded-lg">
+                                <div class="text-indigo-600 text-2xl mb-3">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </div>
+                                <h4 class="font-bold text-lg mb-2">Checkout Process</h4>
+                                <p class="text-gray-700">Streamlined checkout was successful but payment options needed
+                                    clearer presentation.</p>
+                            </div>
+                            <div class="bg-indigo-50 p-6 rounded-lg">
+                                <div class="text-indigo-600 text-2xl mb-3">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h4 class="font-bold text-lg mb-2">Saved Items</h4>
+                                <p class="text-gray-700">Wishlist functionality was underutilized due to low visibility
+                                    in the navigation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-8">
+                        <h3 class="text-xl font-bold mb-4">Recommendations</h3>
+                        <div class="relative">
+                            <div class="absolute left-8 top-0 h-full w-0.5 bg-gray-200"></div>
+                            <div class="space-y-8 pl-12">
+                                <div class="relative journey-step">
+                                    <div
+                                        class="absolute -left-7 top-0 w-5 h-5 rounded-full bg-blue-600 border-4 border-white">
+                                    </div>
+                                    <div class="bg-blue-50 p-5 rounded-lg">
+                                        <h4 class="font-bold text-lg mb-2">Enhance Search Filters</h4>
+                                        <p class="text-gray-600">Add more granular filter options based on user needs
+                                            identified in testing</p>
+                                    </div>
+                                </div>
+                                <div class="relative journey-step">
+                                    <div
+                                        class="absolute -left-7 top-0 w-5 h-5 rounded-full bg-blue-600 border-4 border-white">
+                                    </div>
+                                    <div class="bg-blue-50 p-5 rounded-lg">
+                                        <h4 class="font-bold text-lg mb-2">Redesign Payment Selection</h4>
+                                        <p class="text-gray-600">Make payment options more visually distinct with icons
+                                            and clearer benefits</p>
+                                    </div>
+                                </div>
+                                <div class="relative journey-step">
+                                    <div
+                                        class="absolute -left-7 top-0 w-5 h-5 rounded-full bg-blue-600 border-4 border-white">
+                                    </div>
+                                    <div class="bg-blue-50 p-5 rounded-lg">
+                                        <h4 class="font-bold text-lg mb-2">Promote Saved Items</h4>
+                                        <p class="text-gray-600">Move wishlist to primary navigation and add visual
+                                            indicators</p>
+                                    </div>
+                                </div>
+                                <div class="relative journey-step">
+                                    <div
+                                        class="absolute -left-7 top-0 w-5 h-5 rounded-full bg-blue-600 border-4 border-white">
+                                    </div>
+                                    <div class="bg-blue-50 p-5 rounded-lg">
+                                        <h4 class="font-bold text-lg mb-2">Simplify Animations</h4>
+                                        <p class="text-gray-600">Reduce motion in add-to-cart animation to prevent
+                                            distraction</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-bold mb-4">Impact Assessment</h3>
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="grid md:grid-cols-3 gap-6">
+                                <div>
+                                    <h4 class="font-bold mb-2">Expected Improvement</h4>
+                                    <p class="text-gray-600">Task success rate: 87% → 92%</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2">Development Effort</h4>
+                                    <p class="text-gray-600">2-3 weeks for all recommended changes</p>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-2">Priority</h4>
+                                    <p class="text-gray-600">High (affects core conversion funnel)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="mb-8 md:mb-0">
+                    <h3 class="text-xl font-bold mb-4">MyPortfolio</h3>
+                    <p class="text-gray-400 max-w-md">Showcasing my UX/UI design work and process. Let's create
+                        something amazing together.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Links</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Home</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Projects</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">About</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-semibold uppercase tracking-wider mb-4">Connect</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                    class="fab fa-linkedin text-xl"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                    class="fab fa-dribbble text-xl"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                    class="fab fa-behance text-xl"></i></a>
+                            <a href="#" class="text-gray-400 hover:text-white transition"><i
+                                    class="fab fa-twitter text-xl"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 pt-8 border-t border-gray-700 text-center text-gray-400 text-sm">
+                <p>&copy; 2023 MyPortfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Tab switching functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active classes
+                tabButtons.forEach(btn => {
+                    btn.classList.remove('text-blue-600', 'border-blue-600');
+                    btn.classList.add('text-gray-500', 'hover:text-blue-600');
+                });
+
+                tabContents.forEach(content => {
+                    content.classList.remove('active');
+                });
+
+                // Add active classes
+                button.classList.add('text-blue-600', 'border-blue-600');
+                button.classList.remove('text-gray-500', 'hover:text-blue-600');
+
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+
+        // Animation on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.section-highlight').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+
+</html>
